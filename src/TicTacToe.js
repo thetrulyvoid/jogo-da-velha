@@ -85,6 +85,11 @@ function TicTacToe() {
     setWinner(null);
   }
 
+  const resetRank = () => {
+    setPlayerOneWins(0);
+    setPlayerTwoWins(0);
+  }
+
   // Função para escolher o símbolo do jogador 1
   const handleSymbolChoice = (symbol) => {
     setPlayerOneSymbol(symbol);
@@ -137,6 +142,10 @@ function TicTacToe() {
       {/* Botão para reiniciar o jogo */}
       <div>
         <button className="reset-button" onClick={resetGame}>Recomeçar Jogo!</button>
+      </div>
+
+      <div>
+        <button className="reset-rank-button" onClick={resetRank}>Resetar Pontos!</button>
       </div>
 
       {/* Contador de vitórias */}
