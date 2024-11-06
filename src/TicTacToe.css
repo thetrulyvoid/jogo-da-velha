@@ -2,6 +2,7 @@
   --O-color: #2196f3;
   --X-color: #f44336;
   --E-color: #777;
+  --button-hover: #45a049;
 }
 
 * {
@@ -26,6 +27,37 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Estilos para a seleção de símbolo */
+.symbol-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.symbol-choice h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #333;
+}
+
+.symbol-choice button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.symbol-choice button:hover {
+  background-color: #ddd;
+}
+
+/* Layout da área de jogo */
 .board {
   display: grid;
   grid-template-columns: repeat(3, 240px);
@@ -105,9 +137,53 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   margin-top: 1rem;  /* Adiciona um pequeno espaçamento entre a mensagem e o botão */
-  
 }
 
 .reset-button:hover {
-  background-color: #45a049;
+  background-color: var(--button-hover);
+}
+
+/* Estilos para o placar */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.scoreboard h3:first-child {
+  color: var(--X-color); /* Cor para o jogador 1 */
+}
+
+.scoreboard h3:last-child {
+  color: var(--O-color); /* Cor para o jogador 2 */
+}
+
+/* Estilos para o contador de vitórias */
+.scoreboard h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Adiciona um estilo visual para o placar */
+.scoreboard {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+/* Ajuste no layout do footer e botão de reiniciar */
+footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
